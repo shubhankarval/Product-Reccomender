@@ -1,0 +1,31 @@
+Recommendations Expansion:
+
+Note: All my code can be found in the expansion package, and my CSV file is "data/math.csv".
+
+1. I did my expansion based on the file about Math results.
+
+2. To convert the file into scala readable CSV, I used a combination of Python and Excel.
+   a. I used a method in Excel called replace all to convert nominal to numerical values, then exported it to type .csv.
+   b. While copying to scala, it was putting all the values in double quotes (""), so I used Python to
+      replace all double quotes with empty string.
+   c. These are 2 of my references for converting into numerical values, for different columns:
+      yes - 1
+      no - 0
+
+      other - 0
+      mother - 1
+      father - 2
+
+3. For reading the CSV file, I used the same code as what was provided to us.
+   The only change I made to my topK method was sorting values from map based on their absolute value.
+
+4. My method returns top 6 values with the highest magnitude of correlation with the input property.
+
+5. These are 3 of my results for different properties:
+   a. G3 => List(G2, G1, failures, Medu, higher, age)
+
+   b.Pstatus => List(famsize, absences, Medu, guardian, activities, nursery)
+
+   c.address => List(traveltime, school, internet, age, Medu, G2)
+
+
